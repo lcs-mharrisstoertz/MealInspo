@@ -11,7 +11,7 @@ import SwiftUI
 struct MealInspoApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RandomMealView()
         }
     }
 }
