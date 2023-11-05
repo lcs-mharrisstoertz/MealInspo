@@ -78,12 +78,12 @@ let mealsToShow = [
     
     Meal(nameOfMeal: "Chicken Milanese With Spaghetti",
         imageName: "ChickenMilaneseWithSpaghetti",
-        description: "Pair this simple tomato spaghetti with crispy chicken",
+        description: "",
          dietaryRestrictions: ""),
     
     Meal(nameOfMeal: "Citrus-Poached Pears",
         imageName: "Citrus-PoachedPears",
-        description: "This is the perfect Valentine's day dessert as it's straightforward to make, but has real wow-factor",
+        description: "",
          dietaryRestrictions: "Gluten-Free, Vegetarian"),
     
     Meal(nameOfMeal: "Creamy Prawn Linguine",
