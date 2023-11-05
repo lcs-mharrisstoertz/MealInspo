@@ -11,6 +11,7 @@
 		CC6364C12AF2B0BA00E12DBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC6364C02AF2B0BA00E12DBB /* Assets.xcassets */; };
 		CC6364C42AF2B0BA00E12DBB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC6364C32AF2B0BA00E12DBB /* Preview Assets.xcassets */; };
 		CC6364CC2AF2B33600E12DBB /* RandomMealView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6364CB2AF2B33600E12DBB /* RandomMealView.swift */; };
+		CC6364CF2AF4262900E12DBB /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6364CE2AF4262900E12DBB /* Item.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		CC6364C02AF2B0BA00E12DBB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC6364C32AF2B0BA00E12DBB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CC6364CB2AF2B33600E12DBB /* RandomMealView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomMealView.swift; sourceTree = "<group>"; };
+		CC6364CE2AF4262900E12DBB /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +54,7 @@
 			isa = PBXGroup;
 			children = (
 				CC6364BC2AF2B0B200E12DBB /* MealInspoApp.swift */,
+				CC6364CD2AF425EF00E12DBB /* Models */,
 				CC6364CA2AF2B2F200E12DBB /* Views */,
 				CC6364C02AF2B0BA00E12DBB /* Assets.xcassets */,
 				CC6364C22AF2B0BA00E12DBB /* Preview Content */,
@@ -73,6 +76,14 @@
 				CC6364CB2AF2B33600E12DBB /* RandomMealView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		CC6364CD2AF425EF00E12DBB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CC6364CE2AF4262900E12DBB /* Item.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,6 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC6364CC2AF2B33600E12DBB /* RandomMealView.swift in Sources */,
+				CC6364CF2AF4262900E12DBB /* Item.swift in Sources */,
 				CC6364BD2AF2B0B200E12DBB /* MealInspoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
