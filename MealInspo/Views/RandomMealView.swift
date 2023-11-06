@@ -21,6 +21,8 @@ struct RandomMealView: View {
                 .font(.title2)
             Text(currentMeal.description)
                 .foregroundColor(.blue)
+                .multilineTextAlignment(.center)
+                .padding(.horizontal)
             Image(currentMeal.imageName)
                 .resizable()
                 .scaledToFit()
