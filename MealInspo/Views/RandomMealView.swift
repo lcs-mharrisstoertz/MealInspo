@@ -19,6 +19,8 @@ struct RandomMealView: View {
             Text(currentMeal.nameOfMeal)
                 .bold()
                 .font(.title2)
+                .multilineTextAlignment(.center)
+                .padding(.horizontal)
             Text(currentMeal.description)
                 .foregroundColor(.blue)
                 .multilineTextAlignment(.center)
@@ -31,8 +33,6 @@ struct RandomMealView: View {
                 .foregroundColor(.secondary)
                 .italic()
                 .bold()
-            
-            //EDITS TO MAKE: make it so the description does not touch the border and lines up in center on second line
           
             //buttons
             Group{
@@ -69,6 +69,7 @@ struct RandomMealView: View {
                 }
                 
                 Button(action: {
+                    NewMeal()
                 }, label: {
                     Text("New Meal")
                         .font(.title2)
@@ -80,6 +81,13 @@ struct RandomMealView: View {
            
         }
       //  .navigationTitle("Meal Inspo")
+    }
+    
+    //MARK: FUNCTIONS
+    
+    func NewMeal() {
+        currentMeal = mealsToShow.randomElement()!
+        
     }
 }
 
