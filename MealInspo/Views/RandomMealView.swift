@@ -26,9 +26,11 @@ struct RandomMealView: View {
                 .scaledToFit()
                 .frame(width: 300)
             Text(currentMeal.dietaryRestrictions)
-                .foregroundColor(.gray)
+                .foregroundColor(.secondary)
                 .italic()
                 .bold()
+            
+            //EDITS TO MAKE: make it so the description does not touch the border and lines up in center on second line
           
             //buttons
             Group{
