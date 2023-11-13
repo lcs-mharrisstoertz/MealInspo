@@ -16,6 +16,8 @@ struct RandomMealView: View {
     
     @State var history: [Result] = []
     
+    @State var selectedOutcomeFilter: Outcome = .undetermined
+    
     //MARK: Computed properties
     var body: some View {
         
@@ -92,7 +94,28 @@ struct RandomMealView: View {
                 .controlSize(.large)
             }
             
-            List(history) { currentResult in
+            Text("Saved Meals")
+                .bold()
+                .font(.title2)
+                .padding()
+                .underline()
+            HStack{
+                Text("Filter List:")
+                    .bold()
+                    .foregroundColor(.gray)
+                
+                Picker("Filtering on", selection: $selectedOutcomeFilter) {
+                    Text("All Meals").tag(Outcome.undetermined)
+                    Text("Liked").tag(Outcome.liked)
+                    Text("Favorited").tag(Outcome.favorited)
+                }
+                .foregroundColor(.white)
+                .background(RoundedRectangle(cornerRadius: 20)
+                    .stroke(Color.blue, lineWidth: 2))
+            }
+         
+            
+            List(filtering(originalList: history, on: selectedOutcomeFilter)) { currentResult in
                 HStack{
                     Text(currentResult.meal.nameOfMeal)
                         .bold()
@@ -100,8 +123,7 @@ struct RandomMealView: View {
                     Image(currentResult.meal.imageName)
                         .resizable()
                         .scaledToFit()
-                        .frame(width: 100)
-                    
+                        .frame(width: 75)
                     
                 }
             }

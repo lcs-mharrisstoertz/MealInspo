@@ -14,6 +14,7 @@
 		CC6364CC2AF2B33600E12DBB /* RandomMealView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6364CB2AF2B33600E12DBB /* RandomMealView.swift */; };
 		CC6364CF2AF4262900E12DBB /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6364CE2AF4262900E12DBB /* Item.swift */; };
 		CCE80C272B02919F008B6D3E /* Outcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE80C262B02919F008B6D3E /* Outcome.swift */; };
+		CCE80C2A2B02A428008B6D3E /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE80C292B02A428008B6D3E /* Functions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		CC6364CB2AF2B33600E12DBB /* RandomMealView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomMealView.swift; sourceTree = "<group>"; };
 		CC6364CE2AF4262900E12DBB /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		CCE80C262B02919F008B6D3E /* Outcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Outcome.swift; sourceTree = "<group>"; };
+		CCE80C292B02A428008B6D3E /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				CC6364BC2AF2B0B200E12DBB /* MealInspoApp.swift */,
+				CCE80C282B02A402008B6D3E /* helper */,
 				CC6364CD2AF425EF00E12DBB /* Models */,
 				CC6364CA2AF2B2F200E12DBB /* Views */,
 				CC6364C02AF2B0BA00E12DBB /* Assets.xcassets */,
@@ -90,6 +93,14 @@
 				CCE80C262B02919F008B6D3E /* Outcome.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		CCE80C282B02A402008B6D3E /* helper */ = {
+			isa = PBXGroup;
+			children = (
+				CCE80C292B02A428008B6D3E /* Functions.swift */,
+			);
+			path = helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,6 +178,7 @@
 				CC6364CF2AF4262900E12DBB /* Item.swift in Sources */,
 				CC41A6D12AF9368E0097CB1F /* FavouritesView.swift in Sources */,
 				CC6364BD2AF2B0B200E12DBB /* MealInspoApp.swift in Sources */,
+				CCE80C2A2B02A428008B6D3E /* Functions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
