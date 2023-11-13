@@ -14,6 +14,8 @@ struct RandomMealView: View {
     
     @State var currentOutcome: Outcome = .undetermined
     
+    @State var history: [Result] = []
+    
     //MARK: Computed properties
     var body: some View {
         
@@ -35,7 +37,7 @@ struct RandomMealView: View {
                 .foregroundColor(.secondary)
                 .italic()
                 .bold()
-          
+            
             //buttons
             Group{
                 HStack{
@@ -45,6 +47,8 @@ struct RandomMealView: View {
                         
                         print("Liked")
                         currentOutcome = .liked
+                        
+                        SaveItem()
                         
                     }, label: {
                         Image(systemName: "hand.thumbsup.fill")
@@ -62,6 +66,8 @@ struct RandomMealView: View {
                         print("Favorited")
                         currentOutcome = .favorited
                         
+                        SaveItem()
+                        
                     }, label: {
                         Image(systemName: "heart.fill")
                             .font(.title2)
@@ -72,13 +78,13 @@ struct RandomMealView: View {
                     })
                     .buttonStyle(.bordered)
                     .controlSize(.large)
-
+                    
                 }
                 
                 Button(action: {
-                 //   NewMeal()
+                       NewMeal()
                 }, label: {
-                    Text("New Meal")
+                    Text("Next")
                         .font(.title2)
                         .bold()
                 })
@@ -86,17 +92,39 @@ struct RandomMealView: View {
                 .controlSize(.large)
             }
             
-
-           
+            List(history) { currentResult in
+                HStack{
+                    Text(currentResult.meal.nameOfMeal)
+                        .bold()
+                    Spacer()
+                    Image(currentResult.meal.imageName)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 100)
+                    
+                    
+                }
+            }
+            
         }
-      //  .navigationTitle("Meal Inspo")
+        //  .navigationTitle("Meal Inspo")
     }
     
     //MARK: FUNCTIONS
     
     func NewMeal() {
-       currentMeal = mealsToShow.randomElement()!
+        currentMeal = mealsToShow.randomElement()!
         
+    }
+    
+    func SaveItem() {
+        history.insert(
+            Result(
+                meal: currentMeal,
+                outcome: currentOutcome
+        ),
+                       at: 0
+        )
     }
     
     
