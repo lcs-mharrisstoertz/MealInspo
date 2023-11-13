@@ -7,7 +7,13 @@
 
 import Foundation
 
-
+struct Result: Identifiable {
+    let id = UUID()
+    //meal the user was shown
+    let meal: Meal
+    //is it liked or favorited
+    let outcome: Outcome
+}
 
 struct Meal: Identifiable{
     
