@@ -7,6 +7,8 @@
 
 import Foundation
 
+
+
 struct Meal: Identifiable{
     
     let id = UUID()

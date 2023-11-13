@@ -12,6 +12,8 @@ struct RandomMealView: View {
     //MARK: Stored properties
     @State var currentMeal = mealsToShow.randomElement()!
     
+    @State var currentOutcome: Outcome = .undetermined
+    
     //MARK: Computed properties
     var body: some View {
         
@@ -40,7 +42,10 @@ struct RandomMealView: View {
                     
                     //button 1
                     Button(action: {
-                        //add thumbs up
+                        
+                        print("Liked")
+                        currentOutcome = .liked
+                        
                     }, label: {
                         Image(systemName: "hand.thumbsup.fill")
                             .font(.title2)
@@ -54,7 +59,9 @@ struct RandomMealView: View {
                     
                     //button 2
                     Button(action: {
-                        //add heart
+                        print("Favorited")
+                        currentOutcome = .favorited
+                        
                     }, label: {
                         Image(systemName: "heart.fill")
                             .font(.title2)
@@ -69,7 +76,7 @@ struct RandomMealView: View {
                 }
                 
                 Button(action: {
-                    NewMeal()
+                 //   NewMeal()
                 }, label: {
                     Text("New Meal")
                         .font(.title2)
@@ -78,6 +85,8 @@ struct RandomMealView: View {
                 .buttonStyle(.borderedProminent)
                 .controlSize(.large)
             }
+            
+
            
         }
       //  .navigationTitle("Meal Inspo")
@@ -86,9 +95,11 @@ struct RandomMealView: View {
     //MARK: FUNCTIONS
     
     func NewMeal() {
-        currentMeal = mealsToShow.randomElement()!
+       currentMeal = mealsToShow.randomElement()!
         
     }
+    
+    
 }
 
 #Preview {
