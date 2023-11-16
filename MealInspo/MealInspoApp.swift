@@ -15,7 +15,7 @@ struct MealInspoApp: App {
             TabView{
                 RandomMealView()
                     .tabItem{
-                        Label("Meal Inspo", systemImage: "videoprojector.fill")
+                        Label("Meal Inspo", systemImage: "fork.knife")
                     }
                 FavouritesView()
                     .tabItem{
