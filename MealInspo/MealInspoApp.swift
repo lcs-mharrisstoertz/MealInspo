@@ -11,8 +11,16 @@ import SwiftUI
 struct MealInspoApp: App {
     var body: some Scene {
         WindowGroup {
-            NavigationView{
+            
+            TabView{
                 RandomMealView()
+                    .tabItem{
+                        Label("Meal Inspo", systemImage: "videoprojector.fill")
+                    }
+                FavouritesView()
+                    .tabItem{
+                        Label("Saved Meals", systemImage: "star.fill")
+                    }
             }
         }
     }
