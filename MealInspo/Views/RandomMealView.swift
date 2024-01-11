@@ -22,6 +22,8 @@ struct RandomMealView: View {
     var body: some View {
         
         VStack{
+            Spacer()
+            
             Text(currentMeal.nameOfMeal)
                 .bold()
                 .font(.title2)
@@ -29,14 +31,16 @@ struct RandomMealView: View {
                 .padding(.horizontal)
             Text(currentMeal.description)
                 .foregroundColor(.blue)
+                .font(.subheadline)
                 .multilineTextAlignment(.center)
                 .padding(.horizontal)
             Image(currentMeal.imageName)
                 .resizable()
                 .scaledToFit()
-                .frame(width: 300)
+                .frame(width: 350)
             Text(currentMeal.dietaryRestrictions)
                 .foregroundColor(.secondary)
+                .font(.callout)
                 .italic()
                 .bold()
             
@@ -54,10 +58,10 @@ struct RandomMealView: View {
                         
                     }, label: {
                         Image(systemName: "hand.thumbsup.fill")
-                            .font(.title2)
+                            .font(.title3)
                             .bold()
                         Text("Like")
-                            .font(.title2)
+                            .font(.title3)
                             .bold()
                     })
                     .buttonStyle(.bordered)
@@ -72,10 +76,10 @@ struct RandomMealView: View {
                         
                     }, label: {
                         Image(systemName: "heart.fill")
-                            .font(.title2)
+                            .font(.title3)
                             .bold()
                         Text("Favourite")
-                            .font(.title2)
+                            .font(.title3)
                             .bold()
                     })
                     .buttonStyle(.bordered)
@@ -87,7 +91,7 @@ struct RandomMealView: View {
                        NewMeal()
                 }, label: {
                     Text("Next")
-                        .font(.title2)
+                        .font(.title3)
                         .bold()
                 })
                 .buttonStyle(.borderedProminent)
@@ -96,8 +100,7 @@ struct RandomMealView: View {
             
             Text("Saved Meals")
                 .bold()
-                .font(.title2)
-                .padding()
+                .font(.title3)
                 .underline()
             HStack{
                 Text("Filter List:")
@@ -119,11 +122,10 @@ struct RandomMealView: View {
                 HStack{
                     Text(currentResult.meal.nameOfMeal)
                         .bold()
-                    Spacer()
                     Image(currentResult.meal.imageName)
                         .resizable()
                         .scaledToFit()
-                        .frame(width: 75)
+                        .frame(width: 70)
                     
                 }
             }
