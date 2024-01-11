@@ -11,9 +11,9 @@ struct FavouritesView: View {
     
     //MARK: Stored Properties
     
-    @State var selectedOutcomeFilter: Outcome = .undetermined
-    
     @State var history: [Result] = []
+    
+    @State var selectedOutcomeFilter: Outcome = .undetermined
     
     
     var body: some View {

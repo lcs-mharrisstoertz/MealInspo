@@ -120,7 +120,5 @@ struct RandomMealView: View {
 }
 
 #Preview {
-    NavigationView {
         RandomMealView()
-    }
 }
